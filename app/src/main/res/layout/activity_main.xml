@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_centerInParent="true">
+    <LinearLayout
+     android:id="@+id/Linerlayout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     tools:context="com.example.android.geotest.MainActivity">
+        <TextView
+            style="@style/TextStyle"
+            android:text="一、单项选择题：" />
+        <TextView
+            style="@style/QustionStyle"
+            android:text="1.下列哪些城市属于国家首都？" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/HK"
+                style="@style/AnswerStyle"
+                android:text="香港" />
+            <CheckBox
+                android:id="@+id/BJ"
+                style="@style/AnswerStyle"
+                android:text="北京" />
+            <CheckBox
+                android:id="@+id/NY"
+                style="@style/AnswerStyle"
+                android:text="纽约" />
+            <CheckBox
+                android:id="@+id/TK"
+                style="@style/AnswerStyle"
+                android:text="东京" />
+        </LinearLayout>
+        <TextView
+            style="@style/QustionStyle"
+            android:text="2.下列哪些城市是属于美国的城市？" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/HST"
+                style="@style/AnswerStyle"
+                android:text="华盛顿" />
+            <CheckBox
+                android:id="@+id/LD"
+                style="@style/AnswerStyle"
+                android:text="伦敦" />
+            <CheckBox
+                android:id="@+id/LA"
+                style="@style/AnswerStyle"
+                android:text="洛杉矶" />
+            <CheckBox
+                android:id="@+id/PH"
+                style="@style/AnswerStyle"
+                android:text="费城" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            style="@style/TextStyle"
+            android:text="二、多项选择题：" />
+        <TextView
+            style="@style/QustionStyle"
+            android:text="3.中国属于哪个大洲？" />
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/yazhou"
+                    style="@style/AnswerStyle"
+                    android:text="亚洲" />
+                <RadioButton
+                    android:id="@+id/ouzhou"
+                    style="@style/AnswerStyle"
+                    android:text="欧洲" />
+                <RadioButton
+                    android:id="@+id/meizhou"
+                    style="@style/AnswerStyle"
+                    android:text="美洲" />
+               <RadioButton
+                    android:id="@+id/nanjizhou"
+                   style="@style/AnswerStyle"
+                   android:text="南极洲" />
+        </RadioGroup>
+        <TextView
+            style="@style/QustionStyle"
+            android:text="4.Tokyo是哪个国家首都？" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/china"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3F51B5"
+                android:layout_marginLeft="20dp"
+                android:text="中国" />
+            <RadioButton
+                android:id="@+id/usa"
+                style="@style/AnswerStyle"
+                android:text="美国" />
+            <RadioButton
+                android:id="@+id/canada"
+                style="@style/AnswerStyle"
+                android:text="加拿大"
+               />
+            <RadioButton
+                android:id="@+id/japan"
+                style="@style/AnswerStyle"
+                android:text="日本" />
+        </RadioGroup>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            style="@style/TextStyle"
+            android:text="三、看图填空题："/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/usa"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"/>
+        <TextView
+            style="@style/QustionStyle"
+            android:text="5.图上国旗是属于哪个国家？" />
+
+          <EditText
+              android:id="@+id/nation_text"
+              android:layout_width="300dp"
+              android:layout_height="match_parent"
+              android:hint="2个字"
+              android:layout_marginLeft="50dp" />
+      </LinearLayout>
+     <Button
+         android:id="@+id/sumbit_button"
+         android:layout_width="200dp"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_margin="15dp"
+         android:layout_below="@+id/Linerlayout"
+         android:text="submit"
+         android:onClick="CreateScore"/>
+     <Button
+         android:id="@+id/answer_button"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/sumbit_button"
+         android:layout_centerHorizontal="true"
+         android:visibility="invisible"
+         android:text="answers"
+         android:onClick="showAnswers"
+         />
+ </RelativeLayout>
+</ScrollView>
